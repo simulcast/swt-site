@@ -2,8 +2,8 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
+    //border-top: 5px solid $grey-color-dark;
+    //border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
 
     // Positioning context for the mobile navigation icon
@@ -15,17 +15,22 @@
     font-weight: 300;
     line-height: 56px;
     letter-spacing: -1px;
-    margin-bottom: 0;
+    margin-top: 10px;
+    margin-bottom: 46px;
     float: left;
-
     &,
     &:visited {
         color: $grey-color-dark;
     }
+    @include media-query($on-palm) {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        width: 85%;
+    }
 }
 
 .site-nav {
-    float: right;
+    text-align: center;
     line-height: 56px;
 
     .menu-icon {
@@ -35,7 +40,6 @@
     .page-link {
         color: $text-color;
         line-height: $base-line-height;
-
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
             margin-right: 20px;
@@ -44,28 +48,29 @@
 
     @include media-query($on-palm) {
         position: absolute;
-        top: 9px;
+        top: 13px;
         right: $spacing-unit / 2;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
+        background-color: white;
+        border: 2px solid $text-color;
         border-radius: 5px;
         text-align: right;
 
         .menu-icon {
             display: block;
             float: right;
-            width: 36px;
-            height: 26px;
+            width: 40px;
+            height: 30px;
             line-height: 0;
             padding-top: 10px;
             text-align: center;
 
+            z-index: 100;
             > svg {
-                width: 18px;
-                height: 15px;
+                width: 25px;
+                height: 20px;
 
                 path {
-                    fill: $grey-color-dark;
+                    fill: $text-color;
                 }
             }
         }
@@ -98,8 +103,8 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+    //border-top: 1px solid $grey-color-light;
+    //padding: $spacing-unit 0;
 }
 
 .footer-heading {
